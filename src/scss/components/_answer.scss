@@ -1,6 +1,7 @@
 .answer {
 	border: none;
 	background-color: $color--black-light;
+	cursor: pointer;
 
 	&:hover,
 	&:focus {

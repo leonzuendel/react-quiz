@@ -16,12 +16,14 @@ export interface QuizContextValue {
 	points: number;
 	currentQuestion: number;
 	questions: Question[];
+	hasStarted: boolean;
 }
 
 const initialQuizContext = {
 	...quizData,
 	points: 0,
 	currentQuestion: 0,
+	hasStarted: false,
 } as unknown as QuizContextValue;
 
 const QuizContext = createContext<QuizContextValue>(initialQuizContext);
@@ -66,6 +68,19 @@ function quizContextReducer(quizContext: QuizContextValue, action: string) {
 					currentQuestion: quizContext.currentQuestion + 1,
 				};
 			}
+			case 'START_QUIZ': {
+				return {
+					...quizContext,
+					hasStarted: true,
+				};
+			}
+			case 'RESET_QUIZ': {
+				return {
+					...quizContext,
+					hasStarted: false,
+					currentQuestion: 0,
+				};
+			}
 			default: {
 				throw Error('Unknown action: ' + action);
 			}
@@ -75,4 +90,6 @@ function quizContextReducer(quizContext: QuizContextValue, action: string) {
 export enum QuizContextDispatchType {
 	ADD_POINT = 'ADD_POINT',
 	GO_TO_NEXT_QUESTION = 'GO_TO_NEXT_QUESTION',
+	START_QUIZ = 'START_QUIZ',
+	RESET_QUIZ = 'RESET_QUIZ',
 }

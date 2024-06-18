@@ -1,7 +1,12 @@
 @import 'globals';
+
+@import 'elements/button';
+@import 'elements/headline';
+
 @import 'components/question';
 @import 'components/answer';
 @import 'components/answer-list';
 @import 'components/status';
 @import 'components/quiz';
 @import 'components/results';
+@import 'components/welcome';
