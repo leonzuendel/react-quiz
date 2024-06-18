@@ -8,11 +8,15 @@
 	.headline {
 		margin-bottom: 2rem;
 	}
+
+	&__note {
+		margin: 2rem 0 !important;
+	}
 }
 
 .results-overview {
 	width: 100%;
-	padding: 2rem 0;
+	padding-top: 2rem;
 
 	&__list {
 		list-style-type: none;

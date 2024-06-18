@@ -34,6 +34,8 @@ export default function ResultsView({
 
 			{showOverview && <Overview />}
 
+			<p className="results__note">Danke fürs Mitmachen!</p>
+
 			<button
 				className="button"
 				onClick={() => dispatch(QuizContextDispatchType.RESET_QUIZ)}
