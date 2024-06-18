@@ -1,16 +1,21 @@
-import { useContext } from 'react';
-import { QuizContext } from '../context/QuizContext';
+import { useQuizContext } from '../context/QuizContext';
 import QuestionView from './QuestionView';
 import AnswerListView from './AnswerListView';
+import StatusView from './StatusView';
 
 export default function QuizView() {
-	const [quizContex] = useContext(QuizContext);
+	const quizContex = useQuizContext();
 	if (quizContex) {
-		const { currentQuestion, questions } = quizContex;
+		const { points, currentQuestion, questions } = quizContex;
 		const question = questions[currentQuestion];
 
 		return (
 			<>
+				<StatusView
+					points={points}
+					currentQuestion={currentQuestion}
+					totalQuestions={questions.length}
+				/>
 				<QuestionView question={question.question} />
 				<AnswerListView answers={question.answers} />
 			</>

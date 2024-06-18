@@ -9,6 +9,16 @@
 			"question": "Was ist 2*2?",
 			"answers": ["5", "8", "2", "4"],
 			"correctAnswer": 3
+		},
+		{
+			"question": "Was ist 2*2?",
+			"answers": ["5", "8", "2", "4"],
+			"correctAnswer": 3
+		},
+		{
+			"question": "Was ist 2*2?",
+			"answers": ["5", "8", "2", "4"],
+			"correctAnswer": 3
 		}
 	]
 }

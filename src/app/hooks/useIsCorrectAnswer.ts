@@ -1,8 +1,7 @@
-import { useContext } from 'react';
-import { QuizContext } from '../context/QuizContext';
+import { useQuizContext } from '../context/QuizContext';
 
 const useIsCorrectAnswer = (index: number): boolean => {
-	const [quizContext] = useContext(QuizContext);
+	const quizContext = useQuizContext();
 	if (!quizContext) return false;
 	const { currentQuestion, questions } = quizContext;
 
