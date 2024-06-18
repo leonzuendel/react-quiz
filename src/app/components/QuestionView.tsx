@@ -1,6 +1,6 @@
 export default function QuestionView({ question }: { question: string }) {
 	return (
-		<div>
+		<div className="question">
 			<h1>{question}</h1>
 		</div>
 	);

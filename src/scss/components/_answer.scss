@@ -1,11 +1,17 @@
 .answer {
-	font-size: 1em;
+	border: none;
+	background-color: $color--black-light;
+
+	&:hover,
+	&:focus {
+		background-color: $color--black-lighter;
+	}
 
 	&--is-correct {
-		color: green;
+		background-color: $color--success !important;
 	}
 
 	&--is-incorrect {
-		color: red;
+		background-color: $color--danger !important;
 	}
 }

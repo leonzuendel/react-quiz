@@ -1,4 +1,14 @@
-$font-color: black;
+$color--black: #000000;
+$color--black-light: #222222;
+$color--black-lighter: #444444;
+
+$color--white: #ffffff;
+$color--white-darker: #eeeeee;
+
+$color--danger: #d7191c;
+$color--success: #a6d96a;
+
+$font-color: $color--black;
 
 @media (prefers-color-scheme: dark) {
 }
@@ -17,7 +27,8 @@ body {
 
 body {
 	color: $font-color;
-	background: white;
+	background: $color--white-darker;
+	font-size: 16px;
 }
 
 a {
@@ -25,8 +36,20 @@ a {
 	text-decoration: none;
 }
 
+strong {
+	font-weight: 500;
+}
+
 @media (prefers-color-scheme: dark) {
 	html {
 		color-scheme: dark;
 	}
+}
+
+main {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }

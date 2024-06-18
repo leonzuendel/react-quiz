@@ -2,25 +2,33 @@ import { useQuizContext } from '../context/QuizContext';
 import QuestionView from './QuestionView';
 import AnswerListView from './AnswerListView';
 import StatusView from './StatusView';
+import ResultsView from './ResultsView';
+import { useMemo } from 'react';
+import { Question } from '@/types/question.dt';
 
 export default function QuizView() {
-	const quizContex = useQuizContext();
-	if (quizContex) {
-		const { points, currentQuestion, questions } = quizContex;
-		const question = questions[currentQuestion];
+	const { points, currentQuestion, questions } = useQuizContext();
 
-		return (
-			<>
-				<StatusView
-					points={points}
-					currentQuestion={currentQuestion}
-					totalQuestions={questions.length}
-				/>
-				<QuestionView question={question.question} />
-				<AnswerListView answers={question.answers} />
-			</>
-		);
-	} else {
-		return 'Error: Data is not loaded correctly.';
-	}
+	const question = useMemo<Question>(
+		() => questions[currentQuestion],
+		[questions, currentQuestion]
+	);
+
+	return (
+		<div className="quiz">
+			{currentQuestion === questions.length ? (
+				<ResultsView points={points} totalQuestions={questions.length} />
+			) : (
+				<>
+					<StatusView
+						points={points}
+						currentQuestion={currentQuestion}
+						totalQuestions={questions.length}
+					/>
+					<QuestionView question={question.question} />
+					<AnswerListView answers={question.answers} />
+				</>
+			)}
+		</div>
+	);
 }

@@ -8,8 +8,13 @@ export default function StatusView({
 	totalQuestions: number;
 }) {
 	return (
-		<div>
-			Punkte: {points} | Frage {currentQuestion + 1} / {totalQuestions}
+		<div className="status">
+			<div>
+				<strong>Frage</strong>: {currentQuestion + 1} / {totalQuestions}
+			</div>
+			<div>
+				<strong>Punkte</strong>: {points}
+			</div>
 		</div>
 	);
 }

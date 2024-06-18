@@ -1,43 +1,39 @@
-import { useCallback, useMemo, useState } from 'react';
+import { useMemo } from 'react';
 import useIsCorrectAnswer from '../hooks/useIsCorrectAnswer';
-import {
-	QuizContextDispatchType,
-	useQuizContextDispatch,
-} from '../context/QuizContext';
 
 export default function AnswerView({
 	answer,
 	index,
+	onSelectAnswer,
+	selectedAnswer,
 }: {
 	answer: string;
 	index: number;
+	onSelectAnswer: (index: number, isCorrect: boolean) => void;
+	selectedAnswer: number | undefined;
 }) {
 	const isCorrect = useIsCorrectAnswer(index);
-	const [hasClicked, setHasClicked] = useState<boolean>(false);
-	const dispatch = useQuizContextDispatch();
+	const shouldBeHighlighted = useMemo<boolean>(
+		() =>
+			selectedAnswer != undefined && (selectedAnswer === index || isCorrect),
+		[selectedAnswer, index, isCorrect]
+	);
 
-	const highlightClass = useMemo(() => {
-		if (hasClicked) {
+	const highlightClass = useMemo<string>(() => {
+		if (shouldBeHighlighted) {
 			return isCorrect ? 'answer--is-correct' : 'answer--is-incorrect';
 		} else {
 			return '';
 		}
-	}, [hasClicked, isCorrect]);
-
-	const onSelectAnswer = useCallback(() => {
-		setHasClicked(true);
-		if (isCorrect) {
-			dispatch(QuizContextDispatchType.ADD_POINT);
-		}
-
-		setTimeout(() => {
-			setHasClicked(false);
-			dispatch(QuizContextDispatchType.GO_TO_NEXT_QUESTION);
-		}, 1000);
-	}, [isCorrect]);
+	}, [shouldBeHighlighted, isCorrect]);
 
 	return (
-		<button className={`answer ${highlightClass}`} onClick={onSelectAnswer}>
+		<button
+			className={`answer ${highlightClass}`}
+			onClick={() => onSelectAnswer(index, isCorrect)}
+			title={answer}
+			disabled={Boolean(selectedAnswer)}
+		>
 			<h1>{answer}</h1>
 		</button>
 	);
