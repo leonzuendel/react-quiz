@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { MouseEvent, MouseEventHandler, useMemo } from 'react';
 import useIsCorrectAnswer from '../hooks/useIsCorrectAnswer';
 
 export default function AnswerView({
@@ -27,10 +27,15 @@ export default function AnswerView({
 		}
 	}, [shouldBeHighlighted, isCorrect]);
 
+	const onButtonClick = (event: MouseEvent<HTMLButtonElement>) => {
+		onSelectAnswer(index, isCorrect);
+		(event.target as HTMLButtonElement).blur();
+	};
+
 	return (
 		<button
 			className={`answer ${highlightClass}`}
-			onClick={() => onSelectAnswer(index, isCorrect)}
+			onClick={onButtonClick as unknown as MouseEventHandler<HTMLButtonElement>}
 			title={answer}
 			disabled={Boolean(selectedAnswer)}
 		>
