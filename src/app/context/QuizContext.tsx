@@ -79,6 +79,7 @@ function quizContextReducer(quizContext: QuizContextValue, action: string) {
 					...quizContext,
 					hasStarted: false,
 					currentQuestion: 0,
+					points: 0,
 				};
 			}
 			default: {
