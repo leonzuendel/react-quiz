@@ -1,0 +1,11 @@
+.highlight {
+	font-weight: 500;
+
+	&--success {
+		color: $color--success;
+	}
+
+	&--danger {
+		color: $color--danger;
+	}
+}

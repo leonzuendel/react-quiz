@@ -23,13 +23,17 @@ export default function QuizView() {
 	return (
 		<div className="quiz">
 			{!hasStarted ? (
-				<WelcomeView />
+				<div className="container">
+					<WelcomeView />
+				</div>
 			) : (
 				<>
 					{hasEnded ? (
-						<ResultsView points={points} totalQuestions={questions.length} />
+						<div className="container">
+							<ResultsView points={points} totalQuestions={questions.length} />
+						</div>
 					) : (
-						<>
+						<div className="container container--view-height">
 							<StatusView
 								points={points}
 								currentQuestion={currentQuestion}
@@ -37,7 +41,7 @@ export default function QuizView() {
 							/>
 							<QuestionView question={question.question} />
 							<AnswerListView answers={question.answers} />
-						</>
+						</div>
 					)}
 				</>
 			)}

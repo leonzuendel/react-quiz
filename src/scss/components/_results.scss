@@ -4,4 +4,63 @@
 	flex: 1;
 	align-items: center;
 	justify-content: center;
+
+	.headline {
+		margin-bottom: 2rem;
+	}
+}
+
+.results-overview {
+	width: 100%;
+	padding: 2rem 0;
+
+	&__list {
+		list-style-type: none;
+		margin: 0;
+
+		&-item {
+			margin: 0 0 0 1rem;
+			border-top: 2px solid $color--white-darker;
+			padding: 1rem;
+			display: flex;
+			gap: 2rem;
+			align-items: center;
+
+			details {
+				flex: 1;
+
+				summary {
+					display: flex;
+					width: 100%;
+					justify-content: space-between;
+					align-items: center;
+					cursor: pointer;
+
+					&::marker {
+						content: '';
+					}
+				}
+
+				p {
+					font-size: 1.2rem;
+					margin-top: 1rem;
+					margin-bottom: 0;
+				}
+
+				&[open] {
+					.results-overview__list-marker {
+						transform: rotate(180deg);
+					}
+				}
+			}
+		}
+
+		&-icon {
+			font-size: 2.6rem;
+		}
+
+		&-marker {
+			font-size: 1.4rem;
+		}
+	}
 }

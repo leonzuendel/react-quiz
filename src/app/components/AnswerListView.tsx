@@ -13,6 +13,9 @@ export default function AnswerListView({ answers }: { answers: string[] }) {
 
 	const onSelectAnswer = useCallback((index: number, isCorrect: boolean) => {
 		setSelectedAnswer(index);
+
+		dispatch({ type: QuizContextDispatchType.SAVE_RESULT, payload: index });
+
 		if (isCorrect) {
 			dispatch(QuizContextDispatchType.ADD_POINT);
 		}

@@ -8,7 +8,10 @@ export default function WelcomeView() {
 
 	return (
 		<div className="welcome">
-			<h1 className="headline headline--h1">Willkommen!</h1>
+			<h1 className="headline headline--h1">Willkommen! 👋</h1>
+
+			<p>Hallo</p>
+
 			<button
 				className="button"
 				onClick={() => dispatch(QuizContextDispatchType.START_QUIZ)}

@@ -17,6 +17,7 @@ export interface QuizContextValue {
 	currentQuestion: number;
 	questions: Question[];
 	hasStarted: boolean;
+	results: number[];
 }
 
 const initialQuizContext = {
@@ -24,6 +25,7 @@ const initialQuizContext = {
 	points: 0,
 	currentQuestion: 0,
 	hasStarted: false,
+	results: [],
 } as unknown as QuizContextValue;
 
 const QuizContext = createContext<QuizContextValue>(initialQuizContext);
@@ -53,33 +55,48 @@ export function useQuizContextDispatch() {
 	return useContext(QuizDispatchContext);
 }
 
-function quizContextReducer(quizContext: QuizContextValue, action: string) {
+type ActionWithPayload = { type: string; payload: any };
+
+function quizContextReducer(
+	quizContext: QuizContextValue,
+	action: string | ActionWithPayload
+) {
 	if (quizContext)
-		switch (action) {
-			case 'ADD_POINT': {
+		switch ((action as ActionWithPayload).type ?? action) {
+			case QuizContextDispatchType.ADD_POINT: {
 				return {
 					...quizContext,
 					points: quizContext.points + 1,
 				};
 			}
-			case 'GO_TO_NEXT_QUESTION': {
+			case QuizContextDispatchType.GO_TO_NEXT_QUESTION: {
 				return {
 					...quizContext,
 					currentQuestion: quizContext.currentQuestion + 1,
 				};
 			}
-			case 'START_QUIZ': {
+			case QuizContextDispatchType.START_QUIZ: {
 				return {
 					...quizContext,
 					hasStarted: true,
 				};
 			}
-			case 'RESET_QUIZ': {
+			case QuizContextDispatchType.RESET_QUIZ: {
 				return {
 					...quizContext,
 					hasStarted: false,
 					currentQuestion: 0,
 					points: 0,
+					results: [],
+				};
+			}
+			case QuizContextDispatchType.SAVE_RESULT: {
+				return {
+					...quizContext,
+					results: [
+						...quizContext.results,
+						(action as ActionWithPayload).payload,
+					],
 				};
 			}
 			default: {
@@ -93,4 +110,5 @@ export enum QuizContextDispatchType {
 	GO_TO_NEXT_QUESTION = 'GO_TO_NEXT_QUESTION',
 	START_QUIZ = 'START_QUIZ',
 	RESET_QUIZ = 'RESET_QUIZ',
+	SAVE_RESULT = 'SAVE_RESULT',
 }

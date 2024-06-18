@@ -1,11 +1,13 @@
 import { useQuizContext } from '../context/QuizContext';
 
-const useIsCorrectAnswer = (index: number): boolean => {
-	const quizContext = useQuizContext();
-	if (!quizContext) return false;
-	const { currentQuestion, questions } = quizContext;
+const useIsCorrectAnswer = (
+	answerIndex: number,
+	questionIndex?: number
+): boolean => {
+	const { currentQuestion, questions } = useQuizContext();
+	const index = questionIndex ?? currentQuestion;
 
-	return questions[currentQuestion].correctAnswer === index;
+	return questions[index].correctAnswer === answerIndex;
 };
 
 export default useIsCorrectAnswer;

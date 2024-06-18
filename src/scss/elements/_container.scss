@@ -1,0 +1,21 @@
+.container {
+	width: 100%;
+	max-width: 1200px;
+	height: 100%;
+	background-color: $color--white;
+	flex-grow: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 4rem;
+	border-radius: 0.8rem;
+
+	@media screen and (max-width: 600px) {
+		padding: 0.5rem;
+	}
+
+	&--view-height {
+		max-height: 800px;
+		height: 100vh;
+	}
+}
