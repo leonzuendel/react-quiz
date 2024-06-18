@@ -1,0 +1,11 @@
+.answer {
+	font-size: 1em;
+
+	&--is-correct {
+		color: green;
+	}
+
+	&--is-incorrect {
+		color: red;
+	}
+}
