@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
 	QuizContextDispatchType,
 	useQuizContext,
@@ -6,6 +6,7 @@ import {
 } from '../context/QuizContext';
 import { Question } from '@/types/question.dt';
 import useIsCorrectAnswer from '../hooks/useIsCorrectAnswer';
+import Markdown from 'react-markdown';
 
 export default function ResultsView({
 	points,
@@ -16,34 +17,64 @@ export default function ResultsView({
 }) {
 	const dispatch = useQuizContextDispatch();
 	const [showOverview, setShowOverview] = useState<boolean>(true);
+	const [markdown, setMarkdown] = useState<string>('');
+	const [isLoading, setIsLoading] = useState<boolean>(true);
+
+	useEffect(() => {
+		async function fetchMarkdown() {
+			setIsLoading(true);
+			const markdown = await require('@/content/results.md').default;
+			setMarkdown(markdown);
+			setIsLoading(false);
+		}
+
+		fetchMarkdown().catch(console.error);
+	}, []);
 
 	return (
-		<div className="results flow">
-			<h1 className="headline headline--h1">Das Quiz ist vorbei!</h1>
-			<h2 className="headline headline--h2">
-				Ihr habt {points} von {totalQuestions} möglichen Punkten erzielt.
-			</h2>
+		<>
+			{isLoading ? (
+				<></>
+			) : (
+				<div className="results flow">
+					<h1 className="headline headline--h1">Das Quiz ist vorbei</h1>
+					<h2 className="headline headline--h2">
+						Ihr habt {points} von {totalQuestions} möglichen Punkten erzielt
+					</h2>
 
-			<button
-				className="button"
-				onClick={() => setShowOverview(!showOverview)}
-				title="Quiz neustarten"
-			>
-				{!showOverview ? 'Übersicht anzeigen' : 'Übersicht ausblenden'}
-			</button>
+					<button
+						className="button"
+						onClick={() => setShowOverview(!showOverview)}
+						title="Quiz neustarten"
+					>
+						{!showOverview ? 'Übersicht anzeigen' : 'Übersicht ausblenden'}
+					</button>
 
-			{showOverview && <Overview />}
+					{showOverview && <Overview />}
 
-			<p className="results__note">Danke fürs Mitmachen!</p>
+					<div className="markdown">
+						<Markdown
+							components={{
+								h1(props) {
+									const { node, ...rest } = props;
+									return <h2 className="headline headline--h2" {...rest} />;
+								},
+							}}
+						>
+							{markdown}
+						</Markdown>
+					</div>
 
-			<button
-				className="button"
-				onClick={() => dispatch(QuizContextDispatchType.RESET_QUIZ)}
-				title="Quiz neustarten"
-			>
-				Quiz neustarten
-			</button>
-		</div>
+					<button
+						className="button"
+						onClick={() => dispatch(QuizContextDispatchType.RESET_QUIZ)}
+						title="Quiz neustarten"
+					>
+						Quiz neustarten
+					</button>
+				</div>
+			)}
+		</>
 	);
 }
 
