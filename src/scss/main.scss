@@ -1,5 +1,9 @@
+/* Basics */
+
 @import 'normalize';
 @import 'globals';
+
+/* Elements */
 
 @import 'elements/button';
 @import 'elements/headline';
@@ -7,6 +11,8 @@
 @import 'elements/highlight';
 @import 'elements/container';
 @import 'elements/markdown';
+
+/* Components */
 
 @import 'components/question';
 @import 'components/answer';
