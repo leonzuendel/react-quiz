@@ -1,7 +1,7 @@
 {
 	"questions": [
 		{
-			"question": "Frage 1: Let's keep it basic... ✨ Wie alt bin ich?",
+			"question": "Frage 1: Let's keep it basic ... ✨ Wie alt bin ich?",
 			"answers": ["20", "29", "25", "21"],
 			"correctAnswer": 2
 		},
@@ -26,12 +26,12 @@
 			"correctAnswer": 2
 		},
 		{
-			"question": "Meine nächsten Ziele sind...",
+			"question": "Meine nächsten Ziele sind ...",
 			"answers": [
-				"...möglichst bald nicht mehr zu arbeiten",
-				"...meinen Erfahrungsschatz zu erweitern und tolle Projekte mitgestalten zu können",
-				"...mit dem \"Computer Zeug\" aufzuhören",
-				"...noch nicht festgelegt"
+				"... möglichst bald nicht mehr zu arbeiten",
+				"... meinen Erfahrungsschatz zu erweitern und tolle Projekte mitgestalten zu können",
+				"... mit dem \"Computer Zeug\" aufzuhören",
+				"... noch nicht festgelegt"
 			],
 			"correctAnswer": 1
 		},
@@ -39,7 +39,7 @@
 			"question": "🤬 - Das hasse ich am meisten:",
 			"answers": [
 				"Nichts tun und sich langweilen",
-				"Wandern...",
+				"Wandern ...",
 				"Mit Socken einzuschlafen",
 				"Unter Stress zu stehen"
 			],
@@ -143,20 +143,20 @@
 		{
 			"question": "Was ist meine größte berufliche Schwäche? 😳",
 			"answers": [
-				"Dass ich ungerne mit anderen zusammen arbeite",
+				"Dass ich ungern mit anderen zusammen arbeite",
 				"Dass ich viel zu viel Kaffee trinke",
-				"Dass es mir manchmal schwer fällt meine vielen Ideen zu ordnen",
-				"Dass es mir schwer fällt meine Meinung offen zu sagen"
+				"Dass es mir manchmal schwerfällt meine vielen Ideen zu ordnen",
+				"Dass es mir schwerfällt meine Meinung offen zu sagen"
 			],
 			"correctAnswer": 2
 		},
 		{
-			"question": "Bleiben wir bei den relevanten Themen. 🙌 In 5 Jahren...",
+			"question": "Bleiben wir bei den relevanten Themen. 🙌 In 5 Jahren ...",
 			"answers": [
-				"...arbeite ich weiterhin in der Softwareentwicklung, bin umgezogen und blicke auf herausfordernde Projekte zurück",
-				"...habe ich geheiratet und mir einen Hund zugelegt",
-				"...habe ich mich (erneut) selbsständig gemacht",
-				"...arbeite ich nicht mehr am Computer"
+				"... arbeite ich weiterhin in der Softwareentwicklung, bin umgezogen und blicke auf herausfordernde Projekte zurück",
+				"... habe ich geheiratet und mir einen Hund zugelegt",
+				"... habe ich mich (erneut) selbstständig gemacht",
+				"... arbeite ich nicht mehr am Computer"
 			],
 			"correctAnswer": 0
 		},
@@ -190,18 +190,18 @@
 			"answers": [
 				"Schon 5 Jahre",
 				"Erst 1/2 Jahr",
-				"2 Jahre in einer Agentur, davor 2 Jahre Selbsständigkeit und eine angefangene Ausbildung",
+				"2 Jahre in einer Agentur, davor 2 Jahre Selbstständigkeit und eine angefangene Ausbildung",
 				"3 Jahre duales Studium"
 			],
 			"correctAnswer": 2
 		},
 		{
-			"question": "📅 - Anfangen könnte ich bei euch ab...",
+			"question": "📅 - Anfangen könnte ich bei euch ab ...",
 			"answers": [
-				"...nächstem Jahr",
-				"...August (unter Umständen auch früher)",
-				"...sofort",
-				"...Oktober"
+				"... nächstem Jahr",
+				"... August (unter Umständen auch früher)",
+				"... sofort",
+				"... Oktober"
 			],
 			"correctAnswer": 1
 		}
