@@ -8,9 +8,14 @@
 	line-height: 1.4;
 	font-weight: 600;
 
-	&:hover,
 	&:focus {
 		background-color: $color--black-lighter;
+	}
+
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+			background-color: $color--black-lighter;
+		}
 	}
 
 	&--is-correct {
