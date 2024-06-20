@@ -121,7 +121,7 @@
 				"Dass ich mit 18 ein eigenes Buch veröffentlich habe",
 				"Dass ich in eine eigene Wohnung gezogen bin",
 				"Dass ich mit 17 ein Jahr im Ausland gelebt habe",
-				"Dass ich einen sehr erfolgreichen Social-Media-Account führe"
+				"Dass ich einen sehr erfolgreichen Social Media Account führe"
 			],
 			"correctAnswer": 0
 		},
@@ -172,7 +172,7 @@
 		},
 		{
 			"question": "Mit welcher der folgenden Technologien arbeite ich nicht so gern? 😩",
-			"answers": ["Wordpress", "Symfony", "Typescript", "SCSS"],
+			"answers": ["WordPress", "Symfony", "TypeScript", "SCSS"],
 			"correctAnswer": 0
 		},
 		{
