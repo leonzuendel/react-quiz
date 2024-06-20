@@ -1,24 +1,209 @@
 {
 	"questions": [
 		{
-			"question": "Was ist 1+1?",
-			"answers": ["2", "3", "1", "4"],
+			"question": "Frage 1: Let's keep it basic... ✨ Wie alt bin ich?",
+			"answers": ["20", "29", "25", "21"],
+			"correctAnswer": 2
+		},
+		{
+			"question": "Wo lebe ich derzeit? 🏘️",
+			"answers": [
+				"Im schönen Köln",
+				"Im tollen Erfurt",
+				"Irgendwo in der Nähe von Kassel",
+				"Berlin"
+			],
+			"correctAnswer": 1
+		},
+		{
+			"question": "Was hab ich die letzten zwei Jahre gemacht?",
+			"answers": [
+				"Weltreise natürlich 🌍",
+				"Mal dies, mal das 🙇‍♂️",
+				"Mit den Mäusen von pooliestudios gearbeitet 🐭",
+				"Selbstständigkeit aufgebaut 🧑‍💻"
+			],
+			"correctAnswer": 2
+		},
+		{
+			"question": "Meine nächsten Ziele sind...",
+			"answers": [
+				"...möglichst bald nicht mehr zu arbeiten",
+				"...meinen Erfahrungsschatz zu erweitern und tolle Projekte mitgestalten zu können",
+				"...mit dem \"Computer Zeug\" aufzuhören",
+				"...noch nicht festgelegt"
+			],
+			"correctAnswer": 1
+		},
+		{
+			"question": "🤬 - Das hasse ich am meisten:",
+			"answers": [
+				"Nichts tun und sich langweilen",
+				"Wandern...",
+				"Mit Socken einzuschlafen",
+				"Unter Stress zu stehen"
+			],
 			"correctAnswer": 0
 		},
 		{
-			"question": "Was ist 2*2?",
-			"answers": ["5", "8", "2", "4"],
+			"question": "Welches ist wohl mein ausgefallenstes Hobby?",
+			"answers": [
+				"Brettspiele sammeln (Ich habe schon über 150 Stück) 🎲",
+				"Lange und aufwendig Kochen & Cocktails mixen 🥂",
+				"Gedichte und Poetry Slam schreiben ✍️",
+				"Alles davon 🤪"
+			],
 			"correctAnswer": 3
 		},
 		{
-			"question": "Was ist 2*2?",
-			"answers": ["5", "8", "2", "4"],
+			"question": "Wie habe ich Programmieren gelernt? 📚",
+			"answers": [
+				"Größtenteils selbst beigebracht, dann durch Arbeit an Projekten gefestigt",
+				"Im Studium",
+				"Ich kann gar nicht programmieren",
+				"In einer Ausbildung zum IT-Systemelektroniker"
+			],
+			"correctAnswer": 0
+		},
+		{
+			"question": "🍿 - Mein Lieblingsfilm ist:",
+			"answers": [
+				"Gone Girl - Das perfekte Opfer",
+				"Transformers 1",
+				"Alle Harry Potter Teile",
+				"Ich habe generell keine Lieblings-Sachen, weil ich die Abwechslung liebe"
+			],
 			"correctAnswer": 3
 		},
 		{
-			"question": "Was ist 2*2?",
-			"answers": ["5", "8", "2", "4"],
-			"correctAnswer": 3
+			"question": "So erkennt man mich auf der Straße:",
+			"answers": [
+				"Gar nicht",
+				"An meinen langen Haaren",
+				"An meiner schwarzen Beanie und meinem Oberlippenbart",
+				"An meinen knallbunten Outfits"
+			],
+			"correctAnswer": 2
+		},
+		{
+			"question": "Wieso solltet ihr mich einstellen? 👀",
+			"answers": [
+				"Wegen meinen guten Witzen",
+				"Weil ich sehr sehr gut bin",
+				"Weil ich Verwantwortung übernehme, die nötige Erfahrung mitbringe und Spaß an gemeinsamen Herausforderungen habe",
+				"Wegen meiner knallbunten Outfits"
+			],
+			"correctAnswer": 2
+		},
+		{
+			"question": "Das sind die wichtigsten Learnings die ich aus dem Agentur-Alltag mitgenommen habe:",
+			"answers": [
+				"Das Arbeiten in agilen Teams, mit Anforderungen umzugehen und Feedback zu verstehen",
+				"Everything React.js",
+				"Sich auf Events mit anderen zu vernetzen",
+				"Mir ist keine 4. Antwort eingefallen"
+			],
+			"correctAnswer": 0
+		},
+		{
+			"question": "Wovor fürchte ich mich am meisten? 😔",
+			"answers": [
+				"Nicht genug von der Welt zu sehen",
+				"In Vergessenheit zu geraten",
+				"Spinnen",
+				"Vor Menschenmengen in Einkaufszentren"
+			],
+			"correctAnswer": 1
+		},
+		{
+			"question": "Was ist mein bisher größter persönlicher Erfolg? 🏆",
+			"answers": [
+				"Dass ich mit 18 ein eigenes Buch veröffentlich habe",
+				"Dass ich in eine eigene Wohnung gezogen bin",
+				"Dass ich mit 17 ein Jahr im Ausland gelebt habe",
+				"Dass ich einen sehr erfolgreichen Social-Media-Account führe"
+			],
+			"correctAnswer": 0
+		},
+		{
+			"question": "Dort würde ich später gerne leben:",
+			"answers": [
+				"Berlin 🏙️",
+				"In einer größeren Stadt, aber ich habe mich noch nicht festgelegt 😌",
+				"Hauptsache nicht in Deutschland 🏄",
+				"Da wo ich gerade wohne 😊"
+			],
+			"correctAnswer": 1
+		},
+		{
+			"question": "Welche der folgenden Programmiersprachen mag ich am liebsten?",
+			"answers": ["JavaScript", "PHP", "Python", "C#"],
+			"correctAnswer": 0
+		},
+		{
+			"question": "Was ist meine größte berufliche Schwäche? 😳",
+			"answers": [
+				"Dass ich ungerne mit anderen zusammen arbeite",
+				"Dass ich viel zu viel Kaffee trinke",
+				"Dass es mir manchmal schwer fällt meine vielen Ideen zu ordnen",
+				"Dass es mir schwer fällt meine Meinung offen zu sagen"
+			],
+			"correctAnswer": 2
+		},
+		{
+			"question": "Bleiben wir bei den relevanten Themen. 🙌 In 5 Jahren...",
+			"answers": [
+				"...arbeite ich weiterhin in der Softwareentwicklung, bin umgezogen und blicke auf herausfordernde Projekte zurück",
+				"...habe ich geheiratet und mir einen Hund zugelegt",
+				"...habe ich mich (erneut) selbsständig gemacht",
+				"...arbeite ich nicht mehr am Computer"
+			],
+			"correctAnswer": 0
+		},
+		{
+			"question": "Wie gehe ich mit Kritik um?",
+			"answers": [
+				"Locker und einfach, ich bin Kritik gewohnt und mache mir deshalb keine Vorwürfe 🥱",
+				"Ich gebe direkt Kritik zurück 😠",
+				"Ehrlich gesagt nehme ich sie mir noch etwas zu sehr zu Herzen, aber ich arbeite daran. In allen Fällen versuche ich sie für meine Entwicklung zu nutzen... 💖",
+				"Ich höre sie mir gerne an, nehme sie aber nicht für voll 🦻"
+			],
+			"correctAnswer": 2
+		},
+		{
+			"question": "Mit welcher der folgenden Technologien arbeite ich nicht so gern? 😩",
+			"answers": ["Wordpress", "Symfony", "Typescript", "SCSS"],
+			"correctAnswer": 0
+		},
+		{
+			"question": "Von wo aus arbeite ich am liebsten?",
+			"answers": [
+				"Jeden Tag im Büro 💼",
+				"Von Zuhause oder unterwegs aus 🚂",
+				"Im Café 🍵",
+				"Draußen unter freiem Himmel 🌤️"
+			],
+			"correctAnswer": 1
+		},
+		{
+			"question": "Wie viel Berufserfahrung bringe ich mit? 💪",
+			"answers": [
+				"Schon 5 Jahre",
+				"Erst 1/2 Jahr",
+				"2 Jahre in einer Agentur, davor 2 Jahre Selbsständigkeit und eine angefangene Ausbildung",
+				"3 Jahre duales Studium"
+			],
+			"correctAnswer": 2
+		},
+		{
+			"question": "📅 - Anfangen könnte ich bei euch ab...",
+			"answers": [
+				"...nächstem Jahr",
+				"...August (unter Umständen auch früher)",
+				"...sofort",
+				"...Oktober"
+			],
+			"correctAnswer": 1
 		}
 	]
 }

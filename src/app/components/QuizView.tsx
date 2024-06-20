@@ -28,7 +28,7 @@ export default function QuizView() {
 				</div>
 			) : (
 				<>
-					{hasEnded ? (
+					{hasEnded || !question ? (
 						<div className="container">
 							<ResultsView points={points} totalQuestions={questions.length} />
 						</div>

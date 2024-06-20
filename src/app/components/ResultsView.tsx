@@ -72,6 +72,15 @@ export default function ResultsView({
 					>
 						Quiz neustarten
 					</button>
+
+					<a
+						href="https://github.com/leonzuendel/react-quiz"
+						target="_blank"
+						title="Quellcode ansehen"
+						className="results__link"
+					>
+						Quellcode ansehen
+					</a>
 				</div>
 			)}
 		</>
@@ -114,13 +123,17 @@ const OverviewItem = ({
 					<span className="results-overview__list-marker">⬇️</span>
 				</summary>
 
-				<p>Ihr habt geantwortet: {question.answers[results[index]]}</p>
+				<p>
+					<strong>Ihr habt geantwortet</strong>:{' '}
+					{question.answers[results[index]]}
+				</p>
 
 				{isCorrect ? (
 					<p className="highlight highlight--success">Das war korrekt!</p>
 				) : (
 					<p className="highlight highlight--danger">
-						Korrekt wäre: {question.answers[question.correctAnswer]}
+						<strong>Korrekt wäre</strong>:{' '}
+						{question.answers[question.correctAnswer]}
 					</p>
 				)}
 			</details>

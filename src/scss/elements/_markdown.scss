@@ -1,4 +1,31 @@
 .markdown {
-	margin-bottom: 2rem !important;
 	font-size: 1.4rem;
+
+	@media screen and (max-width: 600px) {
+		font-size: 1rem;
+	}
+
+	p {
+		line-height: 2;
+		margin-bottom: 2rem;
+	}
+
+	code {
+		background-color: $color--white-darker;
+		padding: 0.3rem;
+		font-size: 90%;
+		border-radius: 0.2rem;
+	}
+
+	a {
+		text-decoration: underline;
+
+		&:before {
+			content: '🔗 ';
+		}
+	}
+
+	h2 {
+		margin-bottom: 1.4rem;
+	}
 }

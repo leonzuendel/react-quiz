@@ -1,3 +1,5 @@
+/* Variables */
+
 $color--black: #000000;
 $color--black-light: #222222;
 $color--black-lighter: #444444;
@@ -9,6 +11,8 @@ $color--danger: #d7191c;
 $color--success: #a6d96a;
 
 $font-color: $color--black;
+
+/* Basic Styles */
 
 @media (prefers-color-scheme: dark) {
 }

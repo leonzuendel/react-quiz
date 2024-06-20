@@ -2,6 +2,11 @@
 	border: none;
 	background-color: $color--black-light;
 	cursor: pointer;
+	color: $color--white;
+	padding: 2rem;
+	font-size: 1.6rem;
+	line-height: 1.4;
+	font-weight: 600;
 
 	&:hover,
 	&:focus {
@@ -14,5 +19,10 @@
 
 	&--is-incorrect {
 		background-color: $color--danger !important;
+	}
+
+	@media screen and (max-width: 600px) {
+		font-size: 0.9rem;
+		padding: 1rem;
 	}
 }

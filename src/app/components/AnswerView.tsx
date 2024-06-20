@@ -36,10 +36,10 @@ export default function AnswerView({
 		<button
 			className={`answer ${highlightClass}`}
 			onClick={onButtonClick as unknown as MouseEventHandler<HTMLButtonElement>}
-			title={answer}
+			aria-label={answer}
 			disabled={Boolean(selectedAnswer)}
 		>
-			<h1>{answer}</h1>
+			{answer}
 		</button>
 	);
 }
