@@ -123,7 +123,7 @@ const OverviewItem = ({
 					<span className="results-overview__list-marker">⬇️</span>
 				</summary>
 
-				{results[index] ? (
+				{results[index] != undefined ? (
 					<p>
 						<strong>Ihr habt geantwortet</strong>:{' '}
 						{question.answers[results[index]]}

@@ -5,7 +5,7 @@ const useIsCorrectAnswer = (
 	questionIndex?: number
 ): boolean => {
 	const { currentQuestion, questions } = useQuizContext();
-	const index = questionIndex ?? currentQuestion;
+	const index = questionIndex != undefined ? questionIndex : currentQuestion;
 
 	return questions[index].correctAnswer === answerIndex;
 };
