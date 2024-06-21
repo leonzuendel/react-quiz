@@ -10,4 +10,4 @@ Die gesamte Anwendung läuft lokal im Docker Container und ich habe mir größte
 
 `React`, `Next.js`, `Node`, `Docker`, `Webpack`, `Git`, `Yarn`, `SCSS`, `TypeScript`, `Markdown`, `JSON`
 
-**Hinweis:** Ab der 2. Frage gibt es die Möglichkeit Fragen zu überspringen und direkt zu den Ergebnissen zu springen.
+**Hinweis:** Ab der 2. Frage gibt es (am Desktop) die Möglichkeit Fragen zu überspringen und direkt zu den Ergebnissen zu springen.
