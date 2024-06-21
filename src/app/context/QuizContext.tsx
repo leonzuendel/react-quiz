@@ -18,6 +18,7 @@ export interface QuizContextValue {
 	questions: Question[];
 	hasStarted: boolean;
 	results: number[];
+	hasSkippedToResults: boolean;
 }
 
 const initialQuizContext = {
@@ -26,6 +27,7 @@ const initialQuizContext = {
 	currentQuestion: 0,
 	hasStarted: false,
 	results: [],
+	hasSkippedToResults: false,
 } as unknown as QuizContextValue;
 
 const QuizContext = createContext<QuizContextValue>(initialQuizContext);
@@ -82,13 +84,7 @@ function quizContextReducer(
 				};
 			}
 			case QuizContextDispatchType.RESET_QUIZ: {
-				return {
-					...quizContext,
-					hasStarted: false,
-					currentQuestion: 0,
-					points: 0,
-					results: [],
-				};
+				return initialQuizContext;
 			}
 			case QuizContextDispatchType.SAVE_RESULT: {
 				return {
@@ -97,6 +93,12 @@ function quizContextReducer(
 						...quizContext.results,
 						(action as ActionWithPayload).payload,
 					],
+				};
+			}
+			case QuizContextDispatchType.SKIP_TO_RESULTS: {
+				return {
+					...quizContext,
+					hasSkippedToResults: true,
 				};
 			}
 			default: {
@@ -111,4 +113,5 @@ export enum QuizContextDispatchType {
 	START_QUIZ = 'START_QUIZ',
 	RESET_QUIZ = 'RESET_QUIZ',
 	SAVE_RESULT = 'SAVE_RESULT',
+	SKIP_TO_RESULTS = 'SKIP_TO_RESULTS',
 }

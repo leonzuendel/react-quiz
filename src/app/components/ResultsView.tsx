@@ -123,17 +123,22 @@ const OverviewItem = ({
 					<span className="results-overview__list-marker">⬇️</span>
 				</summary>
 
-				<p>
-					<strong>Ihr habt geantwortet</strong>:{' '}
-					{question.answers[results[index]]}
-				</p>
+				{results[index] ? (
+					<p>
+						<strong>Ihr habt geantwortet</strong>:{' '}
+						{question.answers[results[index]]}
+					</p>
+				) : (
+					<p>
+						<strong>Diese Frage wurde übersprungen</strong>
+					</p>
+				)}
 
 				{isCorrect ? (
 					<p className="highlight highlight--success">Das war korrekt!</p>
 				) : (
 					<p className="highlight highlight--danger">
-						<strong>Korrekt wäre</strong>:{' '}
-						{question.answers[question.correctAnswer]}
+						Korrekt wäre: {question.answers[question.correctAnswer]}
 					</p>
 				)}
 			</details>
