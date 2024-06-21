@@ -10,7 +10,10 @@ export default function NavigationView() {
 		<div className="navigation">
 			<button
 				className="navigation__button"
-				onClick={() => dispatch(QuizContextDispatchType.GO_TO_NEXT_QUESTION)}
+				onClick={() => {
+					dispatch({ type: QuizContextDispatchType.SAVE_RESULT, payload: -1 });
+					dispatch(QuizContextDispatchType.GO_TO_NEXT_QUESTION);
+				}}
 			>
 				Frage überspringen
 			</button>

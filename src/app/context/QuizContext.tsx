@@ -96,9 +96,18 @@ function quizContextReducer(
 				};
 			}
 			case QuizContextDispatchType.SKIP_TO_RESULTS: {
+				const resultsWithRemainingSkipped = quizContext.results;
+
+				quizContext.questions.forEach((_, index) => {
+					if (!resultsWithRemainingSkipped[index]) {
+						resultsWithRemainingSkipped[index] = -1;
+					}
+				});
+
 				return {
 					...quizContext,
 					hasSkippedToResults: true,
+					results: resultsWithRemainingSkipped,
 				};
 			}
 			default: {

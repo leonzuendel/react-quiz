@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import {
 	QuizContextDispatchType,
 	useQuizContext,
@@ -109,7 +109,10 @@ const OverviewItem = ({
 	index: number;
 }) => {
 	const { results } = useQuizContext();
-	const isCorrect = useIsCorrectAnswer(results[index], index);
+
+	const result = useMemo<number>(() => results[index], [results, index]);
+	const isCorrect = useIsCorrectAnswer(result, index);
+	const isSkipped = useMemo<boolean>(() => result === -1, [result]);
 
 	return (
 		<li className="results-overview__list-item">
@@ -123,10 +126,9 @@ const OverviewItem = ({
 					<span className="results-overview__list-marker">⬇️</span>
 				</summary>
 
-				{results[index] != undefined ? (
+				{!isSkipped ? (
 					<p>
-						<strong>Ihr habt geantwortet</strong>:{' '}
-						{question.answers[results[index]]}
+						<strong>Ihr habt geantwortet</strong>: {question.answers[result]}
 					</p>
 				) : (
 					<p>
