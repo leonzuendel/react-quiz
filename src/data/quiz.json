@@ -29,7 +29,7 @@
 			"question": "Meine nächsten Ziele sind ...",
 			"answers": [
 				"... möglichst bald nicht mehr zu arbeiten",
-				"... meinen Erfahrungsschatz zu erweitern und tolle Projekte mitgestalten zu können",
+				"... spannende Projekte mitzugestalten und mehr Verantwortung zu übernehmen",
 				"... mit dem \"Computer Zeug\" aufzuhören",
 				"... noch nicht festgelegt"
 			],
@@ -90,13 +90,13 @@
 			"answers": [
 				"Wegen meinen guten Witzen",
 				"Weil ich sehr sehr gut bin",
-				"Weil ich Verwantwortung übernehme, die nötige Erfahrung mitbringe und Spaß an gemeinsamen Herausforderungen habe",
+				"Weil ich mir zu allem eine Meinung bilde, eigene Ideen einbringe und ein hohes Maß an Perfektion anstrebe",
 				"Wegen meiner knallbunten Outfits"
 			],
 			"correctAnswer": 2
 		},
 		{
-			"question": "Das sind die wichtigsten Learnings die ich aus dem Agentur-Alltag mitgenommen habe:",
+			"question": "Das sind die wichtigsten Learnings, die ich aus dem Agentur-Alltag mitgenommen habe:",
 			"answers": [
 				"Das Arbeiten in agilen Teams, mit Anforderungen umzugehen und Feedback zu verstehen",
 				"Everything React.js",
@@ -114,6 +114,36 @@
 				"Vor Menschenmengen in Einkaufszentren"
 			],
 			"correctAnswer": 1
+		},
+		{
+			"question": "Was bringt mich durch den Alltag?",
+			"answers": [
+				"Mich sportlich betätigen und raus in die Natur gehen 🌿",
+				"Koffein 🔋",
+				"Kleine Freuden, Miteinander sein, etwas Neues ausprobieren und nichts zu ernst nehmen 🥳",
+				"Der Gedanke daran, mich am Abend in mein Bett zu legen 😴"
+			],
+			"correctAnswer": 2
+		},
+		{
+			"question": "Welche der folgenden Aussagen über mich ist gelogen? 🤥",
+			"answers": [
+				"Ich lebe seit über 2 Jahren vegan",
+				"Mein Vater kommt aus Indien und ich war schon ein paar Mal dort",
+				"Ich habe kein Problem damit überall mit fremden Menschen ins Gespräch zu kommen",
+				"Ich bin von Geburt an Linkshänder"
+			],
+			"correctAnswer": 3
+		},
+		{
+			"question": "👏 - Das schätze ich an anderen am meisten:",
+			"answers": [
+				"Offenheit, Begeisterung und Verständnis",
+				"Beeindruckende Erfolge",
+				"Gutes Aussehen",
+				"Disziplin und Zielstrebigkeit"
+			],
+			"correctAnswer": 0
 		},
 		{
 			"question": "Was ist mein bisher größter persönlicher Erfolg? 🏆",
@@ -151,9 +181,9 @@
 			"correctAnswer": 2
 		},
 		{
-			"question": "Bleiben wir bei den relevanten Themen. 🙌 In 5 Jahren ...",
+			"question": "Bleiben wir bei den beruflichen Themen. 🙌 In 5 Jahren ...",
 			"answers": [
-				"... arbeite ich weiterhin in der Softwareentwicklung, bin umgezogen und blicke auf herausfordernde Projekte zurück",
+				"... arbeite ich noch in der Softwareentwicklung, bin in eine fremde Stadt gezogen und habe mich in der Branche etabliert",
 				"... habe ich geheiratet und mir einen Hund zugelegt",
 				"... habe ich mich (erneut) selbstständig gemacht",
 				"... arbeite ich nicht mehr am Computer"
@@ -165,7 +195,7 @@
 			"answers": [
 				"Locker und einfach, ich bin Kritik gewohnt und mache mir deshalb keine Vorwürfe 🥱",
 				"Ich gebe direkt Kritik zurück 😠",
-				"Ehrlich gesagt nehme ich sie mir noch etwas zu sehr zu Herzen, aber ich arbeite daran. In allen Fällen versuche ich sie für meine Entwicklung zu nutzen... 💖",
+				"Ehrlich gesagt nehme ich sie mir noch etwas zu sehr zu Herzen, aber ich arbeite daran. In allen Fällen versuche ich sie für meine Entwicklung zu nutzen … 💖",
 				"Ich höre sie mir gerne an, nehme sie aber nicht für voll 🦻"
 			],
 			"correctAnswer": 2
